@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Form</title>
+</head>
+<body class="form-page">
+  <header>
+    <div class="wrapper">
+      <a href="index.html"><img src="img/logo.webp" alt=""></a>
+      <nav>
+        <a href="#">Stores</a>
+        <a href="#">Help & Support</a>
+        <button>Download</button>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <form action="//httpbin.org/post" method="post" id="register-form">
+      <div class="wrapper">
+        <h1 id="register-title">Register</h1>
+
+        <fieldset>
+          <legend>Personal data</legend>
+
+          <div class="input-field">
+            <input type="text" placeholder="Enter name" name="name" required>
+            <label for="name"><b>Name</b></label>
+          </div>
+  
+          <div class="input-field">
+            <input type="date" name="date" required>
+            <label for="date"><b>Date of Birth</b></label>
+          </div>
+      
+          <label for="sex"><b>Sex</b></label>
+          <div class="sex-block">
+            <div><input type="radio" name="sex" value="male"><span>Male</span></div>
+            <div><input type="radio" name="sex" value="female"><span>Female</span></div>
+          </div>
+
+          <div class="input-field">
+            <input type="password" placeholder="Password" name="psw" required>
+            <label for="psw"><b>Password</b></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact data</legend>
+
+          <div class="input-field">
+            <input type="email" placeholder="Email" name="email" required>
+            <label for="email"><b>Email</b></label>
+          </div>
+
+          <div class="input-field">   
+            <input type="tel" placeholder="Phone number" name="phone" required>
+            <label for="phone"><b>Phone number</b></label>
+          </div>
+
+          <label for="communication"><b>Convenient interval for communication</b></label>
+          <div class="communication-block">
+            <div><input type="radio" name="communication" value="morning"><span>Morning</span></div>
+            <div><input type="radio" name="communication" value="afternoon"><span>Afternoon</span></div>
+            <div><input type="radio" name="communication" value="evening"><span>Evening</span></div>
+            <div><input type="radio" name="communication" value="night"><span>Night</span></div>
+          </div>
+        </fieldset>
+
+        <div class="btns">
+          <button type="submit" class="registerbtn">Register
+            <img src="img/register.png" alt="">
+          </button>
+           <button type="button" class="registerbtn resetbtn">Reset</button> 
+        </div>
+      </div>
+    </form>
+
+    <form action="" id="elements-form">
+      <div class="wrapper">
+        <dl>
+          <dt>root</dt>
+          <dd>:root находит корневой элемент дерева документа. Применимо к HTML, :root находит элемент html и идентичен селектору по тегу html, но его специфичность выше.</dd>
+          
+          <dt>link</dt>
+          <dd>:link позволяет вам выбирать ссылки внутри элементов.</dd>
+          
+          <dt>visited</dt>
+          <dd>:visited позволяет вам выбирать ссылки, которые были посещены.</dd>
+          
+          <dt>hover</dt>
+          <dd>:hover срабатывает, когда пользователь наводит на элемент мышью, но не обязательно активирует его.</dd>
+         
+          <dt>active</dt>
+          <dd>:active соответствует элементу в момент, когда он активируется пользователем. Он позволяет странице среагировать, когда элемент активируется. Взаимодействие элемента с мышью - это, как правило, время между нажатием и отпусканием пользователем кнопки мыши.</dd>
+         
+          <dt>focus</dt>
+          <dd>:focus применяется, когда элемент (такой как input формы) получает фокус. Обычно он активируется при клике мышью пользователем или при выборе элемента с использованием клавиши "tab" на клавиатуре.</dd>
+         
+          <dt>псевдоклассы группы child</dt>
+          <dd>При помощи этих псевдоклассов можно удобно выбирать элементы по их порядковому номеру внутри родительского элемента.</dd>
+         
+          <dt>псевдоклассы группы type</dt>
+          <dd>Псевдоклассы -of-type позволяют выбирать из группы элементы одного уровня вложенности на основании их порядка.</dd>
+         
+          <dt>checked</dt>
+          <dd>:checked CSS находит любые элементы radio , checkbox  или option (option внутри select), которые выбраны или включены. Пользователь может изменить это состояние, нажав на элемент, или выбрав другое значение, в этом случае :checked повторно не применится к элементу, а сохранится.</dd>
+         
+          <dt>disabled, enabled</dt>
+          <dd>:disabled находит любой отключённый элемент, а :enabled находит любой включённый элемент.</dd>
+         
+          <dt>required</dt>
+          <dd>:required находит любые input элементы, имеющие атрибут required. Он позволяет формам легко сообщать, что поля должны быть корректно заполнены перед отправкой формы.</dd>
+         
+          <dt>first-letter</dt>
+          <dd>::first-letter применяет стили к первой букве первой строки блочного элемента, но только если нету другого предшествующего содержимого (такого как изображения или инлайн таблицы).</dd>
+         
+          <dt>first-line</dt>
+          <dd>::first-line применяет стили к первой строке блочного элемента. Обратите внимание, что длина первой строки зависит от многих факторов, включая ширину элемента, ширину документа и размер шрифта текста.</dd>
+         
+          <dt>selection</dt>
+          <dd>::selection позволяет применить стили к части документа, который был выделен пользователем (например, с помощью мыши).</dd>
+         
+          <dt>marker</dt>
+          <dd>применяет стили к маркеру элемента списка, которые обычно содержит значок или номер. Работает с любым элементом или псевдоэлементом, к которого установлен display: list-item, например, у такого как li или summary.</dd>
+         
+          <dt>before</dt>
+          <dd>::before создаёт псевдоэлемент,который является первым потомком выбранного элемента. Часто используется для добавления косметического содержимого в элемент с помощью свойства content. По умолчания является инлайновым.</dd>
+          
+          <dt>after</dt>
+          <dd>::after создаёт псевдоэлемент, который является последним потомком выбранного элемента. Часто используется для добавления косметического содержимого в элемент с помощью свойства content. По умолчанию является инлайновым.</dd>
+          
+          <dt>placeholder</dt>
+          <dd>::placeholder представляет собой текст placeholder в input или textarea (en-US) элементах.</dd>
+        </dl>
+
+        <fieldset>
+          <legend>Псевдоклассы</legend>
+          <div class="pseudo-classes">
+            <div>
+              <input type="checkbox" name="root"
+                     checked>
+              <label for="root">root</label>
+            </div>
+            
+            <div>
+              <input type="checkbox" name="link">
+              <label for="link">link</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="visited">
+              <label for="visited">visited</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="hover"
+                     checked>
+              <label for="hover">hover</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="active"
+                     checked>
+              <label for="active">active</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="focus"
+                     checked>
+              <label for="focus">focus</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="child"
+                     checked>
+              <label for="child">группа child</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="type">
+              <label for="type">группа type</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="checked"
+                     checked>
+              <label for="checked">checked</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="disabled-enabled">
+              <label for="disabled-enabled">disabled, enabled</label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="required">
+              <label for="required">required</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Псевдоэлементы</legend>
+          <div class="pseudo-elements">
+            <div>
+              <input type="checkbox" name="first-letter"
+                     checked>
+              <label for="first-letter">first-letter</label>
+            </div>
+            <div>
+              <input type="checkbox" name="first-line"
+                     checked>
+              <label for="first-line">first-line</label>
+            </div>
+            <div>
+              <input type="checkbox" name="selection"
+                     checked>
+              <label for="selection">selection</label>
+            </div>
+            <div>
+              <input type="checkbox" name="marker">
+              <label for="marker">marker</label>
+            </div>
+            <div>
+              <input type="checkbox" name="before"
+                     checked>
+              <label for="before">before</label>
+            </div>
+            <div>
+              <input type="checkbox" name="after"
+                     checked>
+              <label for="after">after</label>
+            </div>
+            <div>
+              <input type="checkbox" name="placeholder"
+                     checked>
+              <label for="placeholder">placeholder</label>
+            </div>
+          </div>
+        </fieldset>
+
+      </div>
+    </form>
+  </main>
+  <footer>
+    <div class="wrapper">
+      <img src="img/logo_white.webp" alt="">
+      <div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li>
+              <a href="#">Merchant Portal</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5>Support</h5>
+          <ul>
+            <li>
+              <a href="#">FAQ</a>
+            </li>
+            <li>
+              <a href="#">Terms of Service</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5>Follow us</h5>
+          <ul>
+            <li>
+              <a href="#">Twitter</a>
+            </li>
+            <li>
+              <a href="#">Instagram</a>
+            </li>
+            <li>
+              <a href="#">Facebook</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <img id="footer-img-left" src="img/footer_img_1.webp" alt="">
+    <img id="footer-img-right" src="img/footer_img_2.webp" alt="">
+  </footer>
+</body>
+</html>
